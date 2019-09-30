@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int i, j, k;
+	string s, m[] = { "З","С","В","Ю" };
+	cin >> s >> i;
+	for (j = 0; j < 4; j++)
+		if (m[j] == s)
+			k = j;
+	if ((i == 1) && (k == 0))
+		cout << m[3];
+	else if ((i == -1) && (k == 3))
+		cout << m[0];
+	else cout << m[k - i];
+}
